@@ -6,20 +6,20 @@
       "static/css/app/layout.css",
       "static/chunks/app/layout.js"
     ],
-    "/text-analysis/page": [
+    "/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/text-analysis/page.js"
+      "static/chunks/app/page.js"
     ],
     "/image-analysis/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/image-analysis/page.js"
     ],
-    "/metadata-analysis/page": [
+    "/text-analysis/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/metadata-analysis/page.js"
+      "static/chunks/app/text-analysis/page.js"
     ],
     "/behavioral-analysis/loading": [
       "static/chunks/webpack.js",
@@ -31,15 +31,10 @@
       "static/chunks/main-app.js",
       "static/chunks/app/behavioral-analysis/page.js"
     ],
-    "/page": [
+    "/_not-found/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/page.js"
-    ],
-    "/api/analyze-image/route": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/api/analyze-image/route.js"
+      "static/chunks/app/_not-found/page.js"
     ]
   }
 }
