@@ -118,13 +118,13 @@ export default function TextAnalysisPage() {
           </p>
         </div>
 
-        <Tabs defaultValue="input" className="mb-8">
-          <TabsList className="grid w-full grid-cols-2">
+        <Tabs defaultValue="input">
+          <TabsList className="rounded-lg grid w-full grid-cols-2">
             <TabsTrigger className="rounded-xl hover:bg-cyan-500 hover:text-black transition-colors duration-300" value="input">Text Input</TabsTrigger>
             <TabsTrigger className="rounded-xl hover:bg-cyan-500 hover:text-black transition-colors duration-300" value="upload">File Upload</TabsTrigger>
           </TabsList>
           <TabsContent value="input">
-            <Card className="h-[370px] border-blue-700 p-4">
+            <Card className="h-[470px] border-blue-700 mb-5">
               <CardHeader>
                 <CardTitle className="p-2">Enter Text</CardTitle>
                 <CardDescription className="p-2">Paste the text you want to analyze for AI detection</CardDescription>
@@ -156,7 +156,7 @@ export default function TextAnalysisPage() {
             </Card>
           </TabsContent>
           <TabsContent value="upload">
-            <Card className="h-[440px] border-blue-700 p-4">
+            <Card className="h-[560px] border-blue-700 p-4">
               <CardHeader>
                 <CardTitle>Upload Text File</CardTitle>
                 <CardDescription className="p-2">Upload a .txt file to analyze for AI-generated content</CardDescription>

@@ -147,7 +147,7 @@ export default function BehavioralAnalysisPage() {
           <p className="text-muted-foreground">Track patterns in how AI-generated content spreads across platforms</p>
         </div>
 
-        <Card className="h-[300px] border-blue-700 p-4">
+        <Card className="h-[400px] border-blue-700 p-4">
           <CardHeader>
             <CardTitle>Analyze Content Spread</CardTitle>
             <CardDescription>Enter a URL to analyze how the content has spread across the internet</CardDescription>
@@ -186,7 +186,7 @@ export default function BehavioralAnalysisPage() {
             </div>
           </CardContent>
           <CardFooter className="flex justify-between">
-            <Button className="m-4 rounded-xl hover:bg-cyan-500 hover:text-black transition-colors duration-300" variant="outline" onClick={resetAnalysis} disabled={isAnalyzing || (!url && !results)}>
+            <Button className="rounded-xl hover:bg-cyan-500 hover:text-black transition-colors duration-300" variant="outline" onClick={resetAnalysis} disabled={isAnalyzing || (!url && !results)}>
               Clear
             </Button>
           </CardFooter>

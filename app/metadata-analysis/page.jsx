@@ -189,7 +189,7 @@ export default function MetadataAnalysisPage() {
           </p>
         </div>
 
-        <Card className="h-[410px] border-blue-700 p-4">
+        <Card className="h-[530px] border-blue-700 p-4">
           <CardHeader>
             <CardTitle>Upload File</CardTitle>
             <CardDescription>Upload an image, document, or other file to analyze its metadata</CardDescription>

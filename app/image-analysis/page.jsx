@@ -194,7 +194,7 @@ export default function ImageAnalysisPage() {
           </TabsList>
 
           <TabsContent value="upload">
-            <Card className="h-[410px] border-blue-700 p-4">
+            <Card className="h-[530px] border-blue-700 m-4">
               <CardHeader>
                 <CardTitle>Upload Image</CardTitle>
                 <CardDescription>Upload an image to analyze for AI generation or manipulation</CardDescription>
@@ -263,7 +263,7 @@ export default function ImageAnalysisPage() {
           </TabsContent>
 
           <TabsContent value="comparison">
-            <Card className="h-[350px] border-blue-700 p-4">
+            <Card className="h-[450px] border-blue-700 m-4">
               <CardHeader>
                 <CardTitle>Compare Images</CardTitle>
                 <CardDescription>Upload an original image and a suspected deepfake for comparison</CardDescription>
@@ -368,7 +368,7 @@ export default function ImageAnalysisPage() {
           </TabsContent>
 
           <TabsContent value="url">
-            <Card className="h-[250px] border-blue-700 p-4">
+            <Card className="h-[320px] border-blue-700 m-4">
               <CardHeader>
                 <CardTitle>Image URL</CardTitle>
                 <CardDescription>Enter the URL of an image to analyze</CardDescription>
@@ -425,7 +425,7 @@ export default function ImageAnalysisPage() {
           </TabsContent>
 
           <TabsContent value="webcam">
-            <Card className="h-[340px] border-blue-700 p-4">
+            <Card className="h-[470px] border-blue-700 p-4">
               <CardHeader>
                 <CardTitle>Webcam Capture</CardTitle>
                 <CardDescription>Capture an image from your webcam to analyze</CardDescription>
@@ -457,7 +457,7 @@ export default function ImageAnalysisPage() {
                         <h3 className="font-medium">Use your webcam</h3>
                         <p className="text-sm text-muted-foreground">Capture an image to analyze</p>
                       </div>
-                      <Button onClick={startWebcam} variant="secondary" className="h-14 w-35 rounded-xl hover:bg-cyan-500 hover:text-black transition-colors duration-300 cursor-pointer p-4 gap-2">
+                      <Button onClick={startWebcam} variant="secondary" className="h-16 w-40 rounded-xl hover:bg-cyan-500 hover:text-black transition-colors duration-300 cursor-pointer p-4 gap-2">
                         <Camera className="mr-2 h-4 w-4" />
                         Start Webcam
                       </Button>
