@@ -31,6 +31,16 @@
       "static/chunks/main-app.js",
       "static/chunks/app/behavioral-analysis/page.js"
     ],
+    "/metadata-analysis/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/metadata-analysis/page.js"
+    ],
+    "/api/analyze-image/route": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/api/analyze-image/route.js"
+    ],
     "/_not-found/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",

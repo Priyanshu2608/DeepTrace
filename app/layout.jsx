@@ -9,7 +9,7 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata = {
   title: "DeepTrace",
   description: "Detect and analyze AI-generated content",
-  icons: "/favicon.png",
+  icons: "/favicon.ico",
 };
 
 export default function RootLayout({ children }) {
