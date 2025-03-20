@@ -12,8 +12,8 @@ export default function Navbar() {
   const pathname = usePathname()
 
   const routes = [
-    { name: "Home", path: "/", icon: <Home className="h-4 w-4 mr-2" /> },
-    { name: "Text Analysis", path: "/text-analysis", icon: <FileText className="h-4 w-4 mr-2" /> },
+    { name: "Home", path: "/", icon: <Home className="h-4 w-4 mr-2 " /> },
+    { name: "Text Analysis", path: "/text-analysis", icon: <FileText className="h-4 w-4 mr-2 " /> },
     { name: "Image Analysis", path: "/image-analysis", icon: <Image className="h-4 w-4 mr-2" /> },
     { name: "Metadata Analysis", path: "/metadata-analysis", icon: <Database className="h-4 w-4 mr-2" /> },
     { name: "Behavioral Analysis", path: "/behavioral-analysis", icon: <BarChart3 className="h-4 w-4 mr-2" /> },
@@ -25,8 +25,7 @@ export default function Navbar() {
         <div className="flex h-16 items-center justify-between">
           {/* Logo and Branding */}
           <div className="flex items-center">
-            <Link href="/" className="flex items-center space-x-2">
-              {/* Add your logo here */}
+            <Link href="/" className="flex items-center space-x-2 ">
               <img src="/images/LOGO.png" alt="Logo" className="h-[50px] w-[70px]" />
               <span className="text-xl font-bold">DEEPTRACE</span>
             </Link>
@@ -39,7 +38,7 @@ export default function Navbar() {
                 key={route.path}
                 variant={pathname === route.path ? "default" : "ghost"}
                 asChild
-                className="flex items-center"
+                className="flex items-center rounded-[20px] "
               >
                 <Link href={route.path}>
                   {route.icon}
@@ -49,11 +48,11 @@ export default function Navbar() {
             ))}
           </div>
 
-          <div className="flex items-center space-x-2">
+          <div className="flex items-center space-x-4  ">
             <ModeToggle />
             <div className="md:hidden">
               <Button variant="ghost" size="icon" onClick={() => setIsOpen(!isOpen)}>
-                {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+                {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-2" />}
               </Button>
             </div>
           </div>

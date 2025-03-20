@@ -5,16 +5,16 @@ import { ArrowRight, FileText, Image, Database, BarChart3 } from "lucide-react"
 
 export default function Home() {
   return (
-    <div className="container mx-auto py-10 px-4">
-      <div className="text-center mb-12">
-        <h1 className="text-4xl font-bold tracking-tight mb-4">Forensic Analysis of AI-Generated Content</h1>
-        <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+    <div className="container mx-auto py-[150px] px-4">
+      <div className="text-center mb-10">
+        <h1 className="text-4xl font-bold tracking-tight mb-5 mt-[-60px]">Forensic Analysis of AI-Generated Content</h1>
+        <p className="text-xl text-muted-foreground max-w-3xl py-[10px] mx-auto">
           A comprehensive multi-stage system for detecting and analyzing AI-generated content across text, images,
           videos, and metadata.
         </p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-7 mb-12">
         <FeatureCard
           icon={<FileText className="h-10 w-10" />}
           title="Text Analysis"
@@ -24,7 +24,7 @@ export default function Home() {
         <FeatureCard
           icon={<Image className="h-10 w-10" />}
           title="Image & Video Analysis"
-          description="Identify deepfakes and AI-generated visuals through advanced detection algorithms."
+          description="Identify deepfakes and AI-generated visuals through advanced detection."
           href="/image-analysis"
         />
         <FeatureCard
@@ -113,20 +113,22 @@ export default function Home() {
 
 function FeatureCard({ icon, title, description, href }) {
   return (
-    <Card className="h-full flex flex-col">
-      <CardHeader>
-        <div className="mb-2 text-primary">{icon}</div>
-        <CardTitle>{title}</CardTitle>
-        <CardDescription>{description}</CardDescription>
-      </CardHeader>
-      <CardFooter className="mt-auto pt-2">
-        <Button asChild variant="ghost" className="w-full justify-between">
-          <Link href={href}>
-            Learn more <ArrowRight className="h-4 w-4 ml-2" />
-          </Link>
-        </Button>
-      </CardFooter>
-    </Card>
+   <Card className="h-[420px] w-[320px] flex flex-col items-center text-center p-6 hover:cursor-pointer shadow-lg rounded-lg transition-transform transform hover:scale-105">
+  <CardHeader className="flex flex-col items-center gap-3">
+    <div className="text-primary">{icon}</div>
+    <CardTitle className="text-lg font-semibold">{title}</CardTitle>
+    <CardDescription className="text-sm text-muted-foreground">{description}</CardDescription>
+  </CardHeader>
+  
+  <CardFooter className="mt-auto w-full">
+    <Button asChild variant="ghost" className="w-full flex items-center justify-center gap-2">
+      <Link href={href} className="flex items-center">
+        Learn more <ArrowRight className="h-5 w-5" />
+      </Link>
+    </Button>
+  </CardFooter>
+</Card>
+
   )
 }
 
