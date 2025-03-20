@@ -1,4 +1,4 @@
-// File: /Users/jayjariwala/Downloads/DeepTrace/app/layout.jsx
+// File: D:\Webdev\DeepTrace\app\layout.jsx
 import * as entry from '../../../app/layout.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 

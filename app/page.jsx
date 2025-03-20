@@ -99,10 +99,10 @@ export default function Home() {
           Choose one of our analysis tools to begin detecting AI-generated content.
         </p>
         <div className="flex flex-wrap justify-center gap-4">
-          <Button asChild size="lg">
+          <Button asChild className="text-sm rounded-lg p-2 hover:text-white hover:bg-cyan-950 transition-colors duration-300" size="lg">
             <Link href="/text-analysis">Analyze Text</Link>
           </Button>
-          <Button asChild size="lg" variant="outline">
+          <Button asChild size="lg" className="text-sm rounded-lg p-2 hover:text-black hover:bg-blue-500 transition-colors duration-300" variant="outline">
             <Link href="/image-analysis">Analyze Images</Link>
           </Button>
         </div>

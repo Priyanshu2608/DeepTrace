@@ -189,7 +189,7 @@ export default function MetadataAnalysisPage() {
           </p>
         </div>
 
-        <Card className="mb-8">
+        <Card className="h-[410px] border-blue-700 p-4">
           <CardHeader>
             <CardTitle>Upload File</CardTitle>
             <CardDescription>Upload an image, document, or other file to analyze its metadata</CardDescription>
@@ -209,7 +209,7 @@ export default function MetadataAnalysisPage() {
                 disabled={isAnalyzing}
               />
               <Button asChild variant="secondary">
-                <label htmlFor="file-upload" className="cursor-pointer">
+                <label htmlFor="file-upload" className="h-14 w-32 rounded-xl hover:bg-cyan-500 hover:text-black transition-colors duration-300 cursor-pointer p-4 gap-2">
                   <Upload className="mr-2 h-4 w-4" />
                   Browse Files
                 </label>
@@ -222,10 +222,10 @@ export default function MetadataAnalysisPage() {
             </div>
           </CardContent>
           <CardFooter className="flex justify-between">
-            <Button variant="outline" onClick={resetAnalysis} disabled={isAnalyzing || (!file && !results)}>
+            <Button className="m-4 rounded-xl hover:bg-cyan-500 hover:text-black transition-colors duration-300" variant="outline" onClick={resetAnalysis} disabled={isAnalyzing || (!file && !results)}>
               Clear
             </Button>
-            <Button onClick={analyzeMetadata} disabled={isAnalyzing || !file}>
+            <Button className="rounded-xl hover:bg-cyan-950 hover:text-white transition-colors duration-300 mr-4" onClick={analyzeMetadata} disabled={isAnalyzing || !file}>
               {isAnalyzing ? (
                 <>
                   <Loader2 className="mr-2 h-4 w-4 animate-spin" />

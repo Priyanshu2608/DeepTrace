@@ -187,14 +187,14 @@ export default function ImageAnalysisPage() {
 
         <Tabs defaultValue="upload" className="mb-8">
           <TabsList className="grid w-full grid-cols-4">
-            <TabsTrigger value="upload">Upload Image</TabsTrigger>
-            <TabsTrigger value="url">Image URL</TabsTrigger>
-            <TabsTrigger value="webcam">Webcam</TabsTrigger>
-            <TabsTrigger value="comparison">Compare Images</TabsTrigger>
+            <TabsTrigger className="rounded-xl hover:bg-cyan-500 hover:text-black transition-colors duration-300" value="upload">Upload Image</TabsTrigger>
+            <TabsTrigger className="rounded-xl hover:bg-cyan-500 hover:text-black transition-colors duration-300" value="url">Image URL</TabsTrigger>
+            <TabsTrigger className="rounded-xl hover:bg-cyan-500 hover:text-black transition-colors duration-300" value="webcam">Webcam</TabsTrigger>
+            <TabsTrigger className="rounded-xl hover:bg-cyan-500 hover:text-black transition-colors duration-300" value="comparison">Compare Images</TabsTrigger>
           </TabsList>
 
           <TabsContent value="upload">
-            <Card>
+            <Card className="h-[410px] border-blue-700 p-4">
               <CardHeader>
                 <CardTitle>Upload Image</CardTitle>
                 <CardDescription>Upload an image to analyze for AI generation or manipulation</CardDescription>
@@ -228,7 +228,7 @@ export default function ImageAnalysisPage() {
                     disabled={isAnalyzing}
                   />
                   <Button asChild variant="secondary">
-                    <label htmlFor="image-upload" className="cursor-pointer">
+                    <label htmlFor="image-upload" className="h-14 w-35 rounded-xl hover:bg-cyan-500 hover:text-black transition-colors duration-300 cursor-pointer p-4 gap-2">
                       <Upload className="mr-2 h-4 w-4" />
                       Browse Files
                     </label>
@@ -241,14 +241,14 @@ export default function ImageAnalysisPage() {
                 </div>
               </CardContent>
               <CardFooter className="flex justify-between">
-                <Button
+                <Button className="m-4 rounded-xl hover:bg-cyan-500 hover:text-black transition-colors duration-300"
                   variant="outline"
                   onClick={resetAnalysis}
                   disabled={isAnalyzing || (!previewUrl && !originalPreviewUrl && !results)}
                 >
                   Clear
                 </Button>
-                <Button onClick={analyzeImage} disabled={isAnalyzing || !previewUrl}>
+                <Button className="rounded-xl hover:bg-cyan-950 hover:text-white transition-colors duration-300" onClick={analyzeImage} disabled={isAnalyzing || !previewUrl}>
                   {isAnalyzing ? (
                     <>
                       <Loader2 className="mr-2 h-4 w-4 animate-spin" />
@@ -263,7 +263,7 @@ export default function ImageAnalysisPage() {
           </TabsContent>
 
           <TabsContent value="comparison">
-            <Card>
+            <Card className="h-[350px] border-blue-700 p-4">
               <CardHeader>
                 <CardTitle>Compare Images</CardTitle>
                 <CardDescription>Upload an original image and a suspected deepfake for comparison</CardDescription>
@@ -299,7 +299,7 @@ export default function ImageAnalysisPage() {
                         disabled={isAnalyzing}
                       />
                       <Button asChild variant="secondary" size="sm">
-                        <label htmlFor="original-image-upload" className="cursor-pointer">
+                        <label htmlFor="original-image-upload" className="h-14 w-32 rounded-xl hover:bg-cyan-500 hover:text-black transition-colors duration-300 cursor-pointer p-4 gap-2">
                           <Upload className="mr-2 h-4 w-4" />
                           Browse
                         </label>
@@ -336,7 +336,7 @@ export default function ImageAnalysisPage() {
                         disabled={isAnalyzing}
                       />
                       <Button asChild variant="secondary" size="sm">
-                        <label htmlFor="suspected-image-upload" className="cursor-pointer">
+                        <label htmlFor="suspected-image-upload" className="h-14 w-32 rounded-xl hover:bg-cyan-500 hover:text-black transition-colors duration-300 cursor-pointer p-4 gap-2">
                           <Upload className="mr-2 h-4 w-4" />
                           Browse
                         </label>
@@ -346,14 +346,14 @@ export default function ImageAnalysisPage() {
                 </div>
               </CardContent>
               <CardFooter className="flex justify-between">
-                <Button
+                <Button className="m-4 rounded-xl hover:bg-cyan-500 hover:text-black transition-colors duration-300"
                   variant="outline"
                   onClick={resetAnalysis}
                   disabled={isAnalyzing || (!previewUrl && !originalPreviewUrl && !results)}
                 >
                   Clear
                 </Button>
-                <Button onClick={analyzeImage} disabled={isAnalyzing || !previewUrl}>
+                <Button className="rounded-xl hover:bg-cyan-950 hover:text-white transition-colors duration-300" onClick={analyzeImage} disabled={isAnalyzing || !previewUrl}>
                   {isAnalyzing ? (
                     <>
                       <Loader2 className="mr-2 h-4 w-4 animate-spin" />
@@ -368,7 +368,7 @@ export default function ImageAnalysisPage() {
           </TabsContent>
 
           <TabsContent value="url">
-            <Card>
+            <Card className="h-[250px] border-blue-700 p-4">
               <CardHeader>
                 <CardTitle>Image URL</CardTitle>
                 <CardDescription>Enter the URL of an image to analyze</CardDescription>
@@ -385,7 +385,7 @@ export default function ImageAnalysisPage() {
                         onChange={handleUrlChange}
                         disabled={isAnalyzing}
                       />
-                      <Button onClick={loadImageFromUrl} disabled={isAnalyzing || !imageUrl}>
+                      <Button className="rounded-xl hover:bg-cyan-950 hover:text-white transition-colors duration-300" onClick={loadImageFromUrl} disabled={isAnalyzing || !imageUrl}>
                         Load
                       </Button>
                     </div>
@@ -403,14 +403,14 @@ export default function ImageAnalysisPage() {
                 </div>
               </CardContent>
               <CardFooter className="flex justify-between">
-                <Button
+                <Button className="m-4 rounded-xl hover:bg-cyan-500 hover:text-black transition-colors duration-300"
                   variant="outline"
                   onClick={resetAnalysis}
                   disabled={isAnalyzing || (!previewUrl && !originalPreviewUrl && !results)}
                 >
                   Clear
                 </Button>
-                <Button onClick={analyzeImage} disabled={isAnalyzing || !previewUrl || imageUrl !== previewUrl}>
+                <Button className="rounded-xl hover:bg-cyan-950 hover:text-white transition-colors duration-300" onClick={analyzeImage} disabled={isAnalyzing || !previewUrl || imageUrl !== previewUrl}>
                   {isAnalyzing ? (
                     <>
                       <Loader2 className="mr-2 h-4 w-4 animate-spin" />
@@ -425,7 +425,7 @@ export default function ImageAnalysisPage() {
           </TabsContent>
 
           <TabsContent value="webcam">
-            <Card>
+            <Card className="h-[340px] border-blue-700 p-4">
               <CardHeader>
                 <CardTitle>Webcam Capture</CardTitle>
                 <CardDescription>Capture an image from your webcam to analyze</CardDescription>
@@ -457,7 +457,7 @@ export default function ImageAnalysisPage() {
                         <h3 className="font-medium">Use your webcam</h3>
                         <p className="text-sm text-muted-foreground">Capture an image to analyze</p>
                       </div>
-                      <Button onClick={startWebcam} variant="secondary">
+                      <Button onClick={startWebcam} variant="secondary" className="h-14 w-35 rounded-xl hover:bg-cyan-500 hover:text-black transition-colors duration-300 cursor-pointer p-4 gap-2">
                         <Camera className="mr-2 h-4 w-4" />
                         Start Webcam
                       </Button>
@@ -467,14 +467,14 @@ export default function ImageAnalysisPage() {
                 </div>
               </CardContent>
               <CardFooter className="flex justify-between">
-                <Button
+                <Button className="m-4 rounded-xl hover:bg-cyan-500 hover:text-black transition-colors duration-300"
                   variant="outline"
                   onClick={resetAnalysis}
                   disabled={isAnalyzing || (!previewUrl && !isWebcamActive && !originalPreviewUrl && !results)}
                 >
                   Clear
                 </Button>
-                <Button onClick={analyzeImage} disabled={isAnalyzing || !previewUrl || isWebcamActive}>
+                <Button className="rounded-xl hover:bg-cyan-950 hover:text-white transition-colors duration-300" onClick={analyzeImage} disabled={isAnalyzing || !previewUrl || isWebcamActive}>
                   {isAnalyzing ? (
                     <>
                       <Loader2 className="mr-2 h-4 w-4 animate-spin" />

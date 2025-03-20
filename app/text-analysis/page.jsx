@@ -120,14 +120,14 @@ export default function TextAnalysisPage() {
 
         <Tabs defaultValue="input" className="mb-8">
           <TabsList className="grid w-full grid-cols-2">
-            <TabsTrigger value="input">Text Input</TabsTrigger>
-            <TabsTrigger value="upload">File Upload</TabsTrigger>
+            <TabsTrigger className="rounded-xl hover:bg-cyan-500 hover:text-black transition-colors duration-300" value="input">Text Input</TabsTrigger>
+            <TabsTrigger className="rounded-xl hover:bg-cyan-500 hover:text-black transition-colors duration-300" value="upload">File Upload</TabsTrigger>
           </TabsList>
           <TabsContent value="input">
-            <Card>
+            <Card className="h-[370px] border-blue-700 p-4">
               <CardHeader>
-                <CardTitle>Enter Text</CardTitle>
-                <CardDescription>Paste the text you want to analyze for AI detection</CardDescription>
+                <CardTitle className="p-2">Enter Text</CardTitle>
+                <CardDescription className="p-2">Paste the text you want to analyze for AI detection</CardDescription>
               </CardHeader>
               <CardContent>
                 <Textarea
@@ -139,10 +139,10 @@ export default function TextAnalysisPage() {
                 />
               </CardContent>
               <CardFooter className="flex justify-between">
-                <Button variant="outline" onClick={resetAnalysis} disabled={isAnalyzing || (!text && !results)}>
+                <Button variant="outline" className="m-4 rounded-xl hover:bg-cyan-500 hover:text-black transition-colors duration-300" onClick={resetAnalysis} disabled={isAnalyzing || (!text && !results)}>
                   Clear
                 </Button>
-                <Button onClick={simulateAnalysis} disabled={isAnalyzing || !text}>
+                <Button className="rounded-xl hover:bg-cyan-950 hover:text-white transition-colors duration-300" onClick={simulateAnalysis} disabled={isAnalyzing || !text}>
                   {isAnalyzing ? (
                     <>
                       <Loader2 className="mr-2 h-4 w-4 animate-spin" />
@@ -156,17 +156,17 @@ export default function TextAnalysisPage() {
             </Card>
           </TabsContent>
           <TabsContent value="upload">
-            <Card>
+            <Card className="h-[440px] border-blue-700 p-4">
               <CardHeader>
                 <CardTitle>Upload Text File</CardTitle>
-                <CardDescription>Upload a .txt file to analyze for AI-generated content</CardDescription>
+                <CardDescription className="p-2">Upload a .txt file to analyze for AI-generated content</CardDescription>
               </CardHeader>
               <CardContent>
                 <div className="flex flex-col items-center justify-center border-2 border-dashed rounded-lg p-12 text-center">
                   <FileText className="h-10 w-10 text-muted-foreground mb-4" />
                   <div className="mb-4">
                     <h3 className="font-medium">Upload a text file</h3>
-                    <p className="text-sm text-muted-foreground">Drag and drop or click to browse</p>
+                    <p className="text-sm p-2 text-muted-foreground">Drag and drop or click to browse</p>
                   </div>
                   <input
                     type="file"
@@ -177,7 +177,7 @@ export default function TextAnalysisPage() {
                     disabled={isAnalyzing}
                   />
                   <Button asChild variant="secondary">
-                    <label htmlFor="file-upload" className="cursor-pointer">
+                    <label htmlFor="file-upload" className="h-14 w-35 rounded-xl hover:bg-cyan-500 hover:text-black transition-colors duration-300 cursor-pointer p-4 gap-2">
                       <Upload className="mr-2 h-4 w-4" />
                       Browse Files
                     </label>
@@ -190,10 +190,10 @@ export default function TextAnalysisPage() {
                 </div>
               </CardContent>
               <CardFooter className="flex justify-between">
-                <Button variant="outline" onClick={resetAnalysis} disabled={isAnalyzing || (!file && !results)}>
+                <Button variant="outline" className="m-4 rounded-xl hover:bg-cyan-500 hover:text-black transition-colors duration-300" onClick={resetAnalysis} disabled={isAnalyzing || (!file && !results)}>
                   Clear
                 </Button>
-                <Button onClick={simulateAnalysis} disabled={isAnalyzing || !file}>
+                <Button className="rounded-xl hover:bg-cyan-950 hover:text-white transition-colors duration-300" onClick={simulateAnalysis} disabled={isAnalyzing || !file}>
                   {isAnalyzing ? (
                     <>
                       <Loader2 className="mr-2 h-4 w-4 animate-spin" />
