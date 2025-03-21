@@ -25,7 +25,7 @@ export default function Navbar() {
         <div className="flex h-16 items-center justify-between">
           {/* Logo and Branding */}
           <div className="flex items-center">
-            <Link href="/" className="flex items-center space-x-2 ">
+            <Link href="/" className="flex items-center space-x-2">
               <img src="/images/LOGO.png" alt="Logo" className="h-[50px] w-[70px]" />
               <span className="text-xl font-bold">DEEPTRACE</span>
             </Link>
@@ -38,7 +38,7 @@ export default function Navbar() {
                 key={route.path}
                 variant={pathname === route.path ? "default" : "ghost"}
                 asChild
-                className="flex items-center rounded-[20px] "
+                className="flex items-center rounded-[20px]"
               >
                 <Link href={route.path}>
                   {route.icon}
@@ -48,11 +48,12 @@ export default function Navbar() {
             ))}
           </div>
 
-          <div className="flex items-center space-x-4  ">
+          {/* Dark mode and mobile menu */}
+          <div className="flex items-center space-x-4">
             <ModeToggle />
             <div className="md:hidden">
               <Button variant="ghost" size="icon" onClick={() => setIsOpen(!isOpen)}>
-                {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-2" />}
+                {isOpen ? <X className="h-8 w-8" /> : <Menu className="h-8 w-8" />}
               </Button>
             </div>
           </div>
@@ -62,13 +63,13 @@ export default function Navbar() {
       {/* Mobile navigation */}
       {isOpen && (
         <div className="md:hidden border-t">
-          <div className="container mx-auto px-4 py-2 space-y-1">
+          <div className="container mx-auto px-4 py-3 space-y-2">
             {routes.map((route) => (
               <Button
                 key={route.path}
                 variant={pathname === route.path ? "default" : "ghost"}
                 asChild
-                className="w-full justify-start"
+                className="w-full justify-start flex items-center space-x-2 py-2"
                 onClick={() => setIsOpen(false)}
               >
                 <Link href={route.path}>

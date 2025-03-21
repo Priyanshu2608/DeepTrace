@@ -43,7 +43,7 @@ export default function Home() {
 
       <div className="bg-muted rounded-lg p-8 mb-12">
         <div className="max-w-3xl mx-auto">
-          <h2 className="text-2xl font-bold mb-4">How It Works</h2>
+          <h2 className="text-2xl text-center font-bold mb-4">How It Works</h2>
           <ol className="space-y-4">
             <li className="flex gap-4">
               <div className="flex-shrink-0 flex items-center justify-center w-8 h-8 rounded-full bg-primary text-primary-foreground font-bold">
