@@ -1,7 +1,0 @@
-{
-  "/page": "app/page.js",
-  "/text-analysis/page": "app/text-analysis/page.js",
-  "/image-analysis/page": "app/image-analysis/page.js",
-  "/metadata-analysis/page": "app/metadata-analysis/page.js",
-  "/behavioral-analysis/page": "app/behavioral-analysis/page.js"
-}
