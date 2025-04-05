@@ -30,8 +30,6 @@ export default function MetadataAnalysisPage() {
     setError(null)
 
     try {
-      // In a real implementation, you would call your API here
-      // For demo purposes, we'll simulate the analysis
       simulateAnalysis()
     } catch (err) {
       setError(err.message || "An error occurred during analysis")
