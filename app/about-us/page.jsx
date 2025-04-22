@@ -21,13 +21,6 @@ export default function MeetOurTeam() {
           github="https://github.com/jay"
         />
         <TeamMember 
-          name="Akshaj Bansal" 
-          role="AI Engineer" 
-          imgSrc="/images/Akshaj.jpg" 
-          linkedin="https://linkedin.com/in/akshaj" 
-          github="https://github.com/akshaj"
-        />
-        <TeamMember 
           name="Tanmay Bansal" 
           role="Developer" 
           imgSrc="/images/tanmay.jpg" 
